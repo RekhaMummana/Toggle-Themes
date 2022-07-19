@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <style>
+        body {
+            background-color: peachpuff;
+            color: black;
+            font-size: 25px;
+            
+        }
+
+
+        h2,p {
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #main {
+            display: inline-grid;            
+            position:absolute;
+            top:150px; bottom:100px; right:50px; left:550px;
+            align-items: center;
+            margin: 2px 4px 2px 4px;
+            
+        }
+
+        .container {
+            background-color: grey;
+            border-radius: 10px;
+            justify-content: center;
+            padding: 20px 80px 10px 80px;
+            text-align: center;
+            display: inline-table;
+            font-size: 40px;
+            margin: 40px 2px 4px 2px;
+            cursor: pointer;
+            column-count: 3;
+            column-gap: 10px;
+            row-gap: 20px;
+            min-height: 100px;
+            min-width: 150px;
+        }
+        #dark,#dark2,#dark3, #contrast,#contrast2,#contrast3, #light,#light2,#light3 {
+            min-height: 30px;
+            min-width: 100px;
+            border-radius: 10px;
+            margin: 4px 2px 4px 2px;
+        }
+        #dark, #dark2, #dark3{
+            background-color:black;
+            color:white;
+        }
+        #light, #light2, #light3 {
+            background-color:white;
+            color:black;
+        }
+        #contrast,#contrast2,#contrast3 {
+            background: linear-gradient(-50deg, white 50%, black 50%);
+            color:dimgray;
+        }
+        #label1, #label2, #label3, #label4, #label5, #label6{
+            color: black;
+            align-content: center;
+            border: solid;
+            margin: 40px 20px 4px 2px;
+            border-radius: 10px;
+        }
+        
+    </style>
+    <title>Toggle</title>
+</head>
+<body>
+    <h2>Toggle The Themes</h2>
+    <p>Click the buttons to toggle between dark, light and contrast modes</p>
+    <div id="main">
+        
+        <div class="container">
+            <button id="dark">Dark</button>
+            <button id="light">Light</button>
+            <button id="contrast">Contrast</button>
+            <hr />
+            <label style="background-color: #e63946" id="label1">Primary</label>
+            <label style="background-color: #457b9d" id="label2" >Secondary</label>
+        </div>
+        <div class="container">
+            <button id="dark2">Dark</button>
+            <button id="light2">Light</button>
+            <button id="contrast2">Contrast</button>
+            <hr />
+            <label style="background-color: #90e0ef" id="label3">Primary</label>
+            <label style="background-color: #dedbd2" id="label4">Secondary</label>
+
+        </div>
+        <div class="container">
+            <button id="dark3" onclick="darkTheme()">Dark</button>
+            <button id="light3" onclick="lightTheme()">Light</button>
+            <button id="contrast3" onclick="contrast()">Contrast</button>
+            <hr />
+            <label style="background-color: #0077b6" id="label5">Primary</label>
+            <label style="background-color: #468faf" id="label6">Secondary</label>
+        </div>
+    </div>
+
+
+    <script>
+        //Set 1
+        document.getElementById("dark").onclick = function () {
+            document.getElementById("label1").style.background = '#731C23';
+            document.getElementById("label2").style.background = '#336699';
+        }
+        document.getElementById("light").onclick = function () {
+            document.getElementById("label1").style.background = '#F5AFB5';
+            document.getElementById("label2").style.background = 'lightblue';
+        }
+        document.getElementById("contrast").onclick = function () {
+            document.getElementById("label1").style.background = '#457b9d';
+            document.getElementById("label2").style.backgroundColor = '#e63946';
+        }
+        //Set 2
+        document.getElementById("dark2").onclick = function () {
+            document.getElementById("label3").style.background = '#649CA7';
+            document.getElementById("label4").style.background = '#85837E';
+        }
+        document.getElementById("light2").onclick = function () {
+            document.getElementById("label3").style.background = '#C7EFF6';
+            document.getElementById("label4").style.background = '#F1F0ED';
+        }
+        document.getElementById("contrast2").onclick = function () {
+            document.getElementById("label3").style.background = '#dedbd2';
+            document.getElementById("label4").style.backgroundColor = '#90e0ef';
+        }
+        //Set 3
+        document.getElementById("dark3").onclick = function () {
+            document.getElementById("label5").style.background = '#003B5B';
+            document.getElementById("label6").style.background = '#1C3946';
+        }
+        document.getElementById("light3").onclick = function () {
+            document.getElementById("label5").style.background = '#99C8E1';
+            document.getElementById("label6").style.background = '#C7DDE7';
+        }
+        document.getElementById("contrast3").onclick = function () {
+            document.getElementById("label5").style.background = '#468faf';
+            document.getElementById("label6").style.backgroundColor = '#0077b6';
+        }
+    </script>
+</body>
+</html>
